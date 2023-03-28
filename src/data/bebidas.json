@@ -1,0 +1,37 @@
+[
+  {
+    "id": 4001,
+    "img": "",
+    "nombre": "coca cola 2.25",
+    "precio": 500,
+    "medida": "uni"
+  },
+  {
+    "id": 4002,
+    "img": "",
+    "nombre": "agua villamanaos 2L",
+    "precio": 200,
+    "medida": "uni"
+  },
+  {
+    "id": 4003,
+    "img": "",
+    "nombre": "baggio fresh 1.5L pomelo",
+    "precio": "",
+    "medida": "uni"
+  },
+  {
+    "id": 4004,
+    "img": "",
+    "nombre": "lata brahma",
+    "precio": "",
+    "medida": "uni"
+  },
+  {
+    "id": 4005,
+    "img": "",
+    "nombre": "fernet branca 750cc",
+    "precio": "",
+    "medida": "uni"
+  }
+]

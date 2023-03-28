@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1001,
+    "img": "https://www.arandahnos.com.ar/img_productos/acelga-organica.jpg",
+    "nombre": "acelga fresca",
+    "cantidad": "",
+    "precio": 100,
+    "medida": "kg"
+  },
+  {
+    "id": 1002,
+    "img": "",
+    "nombre": "aji picante",
+    "cantidad": "",
+    "precio": 50,
+    "medida": "kg"
+  },
+  {
+    "id": 1003,
+    "img": "https://www.arandahnos.com.ar/img_productos/1e1f5a4b0fd08963fc4164c0a3c1c05c.jpeg",
+    "nombre": "ajo",
+    "cantidad": "",
+    "precio": 100,
+    "medida": "kg"
+  },
+  {
+    "id": 1004,
+    "img": "https://www.arandahnos.com.ar/img_productos/albahaca.jpg",
+    "nombre": "albahaca",
+    "cantidad": "",
+    "precio": 50,
+    "medida": "kg"
+  },
+  {
+    "id": 1005,
+    "img": "",
+    "nombre": "alcaucil",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1006,
+    "img": "",
+    "nombre": "apio",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1007,
+    "img": "",
+    "nombre": "bandeja sopa",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1008,
+    "img": "",
+    "nombre": "bandeja ensalada",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1009,
+    "img": "",
+    "nombre": "batata boniato",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1010,
+    "img": "",
+    "nombre": "batata colorada",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1011,
+    "img": "",
+    "nombre": "berenjena",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1012,
+    "img": "",
+    "nombre": "brocoli",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1013,
+    "img": "",
+    "nombre": "cabutia",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1014,
+    "img": "",
+    "nombre": "calabaza(anco)",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1015,
+    "img": "",
+    "nombre": "cebolla",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1016,
+    "img": "",
+    "nombre": "cebolla de verdeo",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1017,
+    "img": "",
+    "nombre": "cebolla morada",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1018,
+    "img": "",
+    "nombre": "chaucha",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1019,
+    "img": "",
+    "nombre": "choclo",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1020,
+    "img": "",
+    "nombre": "coliflor",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1021,
+    "img": "",
+    "nombre": "esparragos",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1022,
+    "img": "",
+    "nombre": "espinada fresca",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1023,
+    "img": "",
+    "nombre": "lechuga capuchina",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1024,
+    "img": "",
+    "nombre": "lechuga criolla",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1025,
+    "img": "",
+    "nombre": "lechuga francesa",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1026,
+    "img": "",
+    "nombre": "lechuga mantecosa",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1027,
+    "img": "",
+    "nombre": "lechuga morada",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1028,
+    "img": "",
+    "nombre": "morron amarillo",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1029,
+    "img": "",
+    "nombre": "morron rojo",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1030,
+    "img": "",
+    "nombre": "morron verde",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1031,
+    "img": "",
+    "nombre": "palta hass",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1032,
+    "img": "",
+    "nombre": "papa blanca",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1033,
+    "img": "",
+    "nombre": "papa oferta",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1034,
+    "img": "",
+    "nombre": "pepino",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1035,
+    "img": "",
+    "nombre": "perejil",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1036,
+    "img": "",
+    "nombre": "puerro",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1037,
+    "img": "",
+    "nombre": "rabanito",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1038,
+    "img": "",
+    "nombre": "radicheta",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1039,
+    "img": "",
+    "nombre": "remolacha",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1040,
+    "img": "",
+    "nombre": "rucula",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1041,
+    "img": "",
+    "nombre": "tomate cherry",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1042,
+    "img": "",
+    "nombre": "tomate perita",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1043,
+    "img": "",
+    "nombre": "tomate redondo",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1044,
+    "img": "",
+    "nombre": "zanahoria",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1045,
+    "img": "",
+    "nombre": "zapallito",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1046,
+    "img": "",
+    "nombre": "zuccini",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1047,
+    "img": "",
+    "nombre": "batata",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1048,
+    "img": "",
+    "nombre": "batata",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1049,
+    "img": "",
+    "nombre": "batata",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  },
+  {
+    "id": 1050,
+    "img": "",
+    "nombre": "batata",
+    "cantidad": "",
+    "precio": "",
+    "medida": "kg"
+  }
+]
