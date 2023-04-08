@@ -68,42 +68,51 @@ export default function Form(props) {
   };
 
   // console.log(form);
+  const titleStyle = "text-xs font-semibold mt-2";
+
+  const divStyle = "flex flex-row flex-wrap";
 
   return (
     <>
       <form className="flex flex-col">
-        <label>Nombre completo *</label>
+        <label className={titleStyle}>Nombre completo *</label>
         <input type="text" name="name" onChange={handleInput} />
 
-        <label>Telefono *</label>
+        <label className={titleStyle}>Telefono *</label>
         <input type="number" name="telefono" onChange={handleInput} />
 
-        <span>Forma de entrega *</span>
-        <input
-          name="entrega"
-          type="radio"
-          value="Retiro en persona"
-          onChange={handleEntrega}
-        />
-        <label>Retiro en persona</label>
-        <input
-          name="entrega"
-          type="radio"
-          value="Envio a domicilio"
-          onChange={handleEntrega}
-        />
-        <label>Envio a domicilio</label>
+        <span className={titleStyle}>Forma de entrega *</span>
+        <div className={divStyle}>
+          <div className="w-full my-1 flex items-center">
+            <input
+              name="entrega"
+              type="radio"
+              value="Retiro en persona"
+              onChange={handleEntrega}
+            />
+            <label className="ml-2">Retiro en persona</label>
+          </div>
+          <div className="w-full mb-1 flex items-center">
+            <input
+              name="entrega"
+              type="radio"
+              value="Envio a domicilio"
+              onChange={handleEntrega}
+            />
+            <label className="ml-2">Envio a domicilio</label>
+          </div>
+        </div>
 
         {envio ? (
           <>
-            <label>Dirección *</label>
+            <label className={titleStyle}>Dirección *</label>
             <input
               type="text"
               name="direccion"
               placeholder="Av Mitre 1000 6°A, Avellaneda"
               onChange={handleInput}
             />
-            <label>Referencias</label>
+            <label className={titleStyle}>Referencias</label>
             <input
               type="text"
               placeholder="Entre calles, timbre, casa sin numero, etc."
@@ -115,23 +124,34 @@ export default function Form(props) {
           ((form.direccion = ""), (form.referencias = ""))
         )}
 
-        <span>¿Cómo abonás? *</span>
-        <input
-          name="metodo"
-          type="radio"
-          value="Efectivo"
-          onChange={handleInput}
-        />
-        <label>Efectivo</label>
-        <input
-          name="metodo"
-          type="radio"
-          value="Mercado Pago"
-          onChange={handleInput}
-        />
-        <label>Mercado Pago</label>
-        {!requerido && <span>Complete los campos obligatorios</span>}
-        <button type="button" onClick={handleSubmit}>
+        <span className={titleStyle}>¿Cómo abonás? *</span>
+        <div className={divStyle}>
+          <div className="w-full my-1 flex items-center">
+            <input
+              name="metodo"
+              type="radio"
+              value="Efectivo"
+              onChange={handleInput}
+            />
+            <label className="ml-2">Efectivo</label>
+          </div>
+          <div className="w-full mb-1 flex items-center">
+            <input
+              name="metodo"
+              type="radio"
+              value="Mercado Pago"
+              onChange={handleInput}
+            />
+            <label className="ml-2">Mercado Pago</label>
+          </div>
+        </div>
+
+        {!requerido && <span className="text-xs text-red-600 my-1">*Complete los campos obligatorios</span>}
+        <button
+          type="button"
+          onClick={handleSubmit}
+          className="w-11/12 py-2 my-2 rounded-md bg-green-500 hover:bg-green-400 text-white"
+        >
           Finalizar compra
         </button>
       </form>

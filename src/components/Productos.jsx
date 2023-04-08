@@ -65,20 +65,22 @@ export default function Productos() {
       <h4 className="text-center p-2 m-1 bg-[#009033] text-[#fcfcfc] uppercase">
         Si tu compra supera los $4000 el envio es GRATIS!
       </h4>
-      {/* AGREGAR OPCIONES PARA SELECCIONAR CATEGORIAS */}
-      <p className="uppercase">categoria: </p>
-      <select
-        name=""
-        value={selectedCategory}
-        id=""
-        onChange={handleSelected}
-        className="capitalize"
-      >
-        <option value="verduras">verduras</option>
-        <option value="frutas">frutas</option>
-        <option value="almacen">almacen</option>
-        <option value="bebidas">bebidas</option>
-      </select>
+      <div className="flex justify-center items-center py-2">
+        <p className="uppercase font-semibold">categoria: </p>
+        <select
+          name=""
+          value={selectedCategory}
+          id=""
+          onChange={handleSelected}
+          className="capitalize"
+        >
+          <option value="verduras">verduras</option>
+          <option value="frutas">frutas</option>
+          <option value="almacen">almacen</option>
+          <option value="bebidas">bebidas</option>
+        </select>
+      </div>
+
       <div>
         <Item
           productos={productosCantidad}
@@ -86,7 +88,12 @@ export default function Productos() {
           handleAgregar={handleAgregar}
         />
       </div>
-      <button onClick={handleClickTop}>Volver arriba</button>
+      <button
+        className="pb-2 italic text-sm hover:underline"
+        onClick={handleClickTop}
+      >
+        Volver arriba
+      </button>
     </div>
   );
 }

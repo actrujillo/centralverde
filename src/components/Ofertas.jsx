@@ -8,38 +8,34 @@ export default function Ofertas() {
     {
       id: 1,
       descuento: "10%",
-      titulo: "Papa x 3kg",
+      nombre: "Papa x 3kg",
       img: "https://tgardenfruitnveg.com.au/wp-content/uploads/2020/08/6pro-2-1.png",
       medida: "uni",
       precio: 100,
-      promo: "2 kg",
     },
     {
       id: 2,
       descuento: "20%",
-      titulo: "Cebolla",
+      nombre: "Cebolla x 2kg",
       img: "https://tgardenfruitnveg.com.au/wp-content/uploads/2020/08/6pro-2-1.png",
       medida: "uni",
       precio: 100,
-      promo: "4 kg",
     },
     {
       id: 3,
       descuento: "30%",
-      titulo: "Banana",
+      nombre: "Banana x 2kg",
       img: "https://tgardenfruitnveg.com.au/wp-content/uploads/2020/08/6pro-2-1.png",
       medida: "uni",
       precio: 50,
-      promo: "3 kg",
     },
     {
       id: 4,
       descuento: "40%",
-      titulo: "Tomate",
+      nombre: "Tomate x 3kg",
       img: "https://tgardenfruitnveg.com.au/wp-content/uploads/2020/08/6pro-2-1.png",
       medida: "uni",
       precio: 50,
-      promo: "3 kg",
     },
   ];
 
@@ -67,8 +63,7 @@ export default function Ofertas() {
               </span>
             </div>
             <img src={item.img} alt="producto" className="h-20" />
-            <h3 className="text-[#134c27] font-semibold">{item.titulo}</h3>
-            <p className="text-xs">{item.promo}</p>
+            <h3 className="text-[#134c27] font-semibold py-2">{item.nombre}</h3>
             <div className="flex justify-between w-full pl-1">
               <span className="font-semibold">$ {item.precio}</span>
               <button

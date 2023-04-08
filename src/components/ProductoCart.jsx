@@ -30,21 +30,50 @@ export default function ProductoCart(props) {
     dispatch(eliminarProducto(producto));
   };
 
+  const buttonStyle =
+    "bg-green-500 border-y-1 border-green-500 px-2  hover:bg-green-300 hover:border-green-300 text-white";
+
   return (
     <>
       {productosCarrito.productos
         // .filter((item) => item.cantidad > 0)
         .map((item) => (
-          <div key={item.id} className="flex">
-            <h3>{item.nombre}</h3>
-            <h3>{item.titulo}</h3>
-            <button onClick={() => handleDisminuir(item)}>-</button>
-            <p>
-              {item.cantidad}
-              {item.medida}
-            </p>
-            <button onClick={() => handleAgregar(item)}>+</button>
-            <button onClick={() => handleDelete(item)}>elimi</button>
+          <div
+            key={item.id}
+            className="flex w-11/12 justify-center items-center my-2 border-2"
+          >
+            <div className="w-1/3 h-[120px] bg-white p-2 border-r-2 flex items-center">
+              <img src={item.img} alt="producto en carrito" />
+            </div>
+            <div className="w-2/3 h-[120px] px-2 bg-green-50 flex flex-col justify-evenly">
+              <h3 className="capitalize">{item.nombre}</h3>
+              <div className="flex justify-between">
+                <p className="">${item.precio * item.cantidad}</p>
+                <button
+                  onClick={() => handleDelete(item)}
+                  className="px-2 border border-gray-800 text-gray-800 rounded-full"
+                >
+                  x
+                </button>
+              </div>
+              <div className="flex flex-row justify-evenly w-32">
+                <button
+                  onClick={() => handleDisminuir(item)}
+                  className={buttonStyle}
+                >
+                  -
+                </button>
+                <p className="border-y-2 border-green-500 w-full text-center">
+                  {item.cantidad}
+                </p>
+                <button
+                  onClick={() => handleAgregar(item)}
+                  className={buttonStyle}
+                >
+                  +
+                </button>
+              </div>
+            </div>
 
             {/* MODAL PARA ELIMINAR UN ITEM
             {deleteItem && (
@@ -54,7 +83,6 @@ export default function ProductoCart(props) {
                 <button onClick={() => setDeleteItem(null)}>Cancelar</button>
               </div>
             )} */}
-
           </div>
         ))}
     </>

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { vaciarCarrito } from "../redux/carritoSlice";
 import Form from "./Form";
 import ProductoCart from "./ProductoCart";
+import { IoTrashOutline } from "react-icons/io5";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 export default function Cart() {
   const productosCarrito = useSelector((state) => state.carrito);
@@ -28,22 +30,46 @@ export default function Cart() {
           </div>
         ) : !formVisible ? (
           <>
+            <div className="flex justify-between w-11/12">
+              <h3 className="font-semibold">Mi Carrito</h3>
+              <button
+                className="text-2xl mr-2 hover:text-gray-600"
+                onClick={() => handleClearCart()}
+              >
+                <IoTrashOutline />
+              </button>
+            </div>
             <ProductoCart productosCarrito={productosCarrito} />
-            <button onClick={() => handleClearCart()}>Vaciar carrito</button>
-            <button onClick={() => setFormVisible(true)}>
-              Confirmar Pedido
+            <span className="my-2 font-semibold">
+              Total: ${productosCarrito.total}
+            </span>
+            <button
+              className="w-11/12 py-2 mb-4 rounded-md bg-green-500 hover:bg-green-400 text-white"
+              onClick={() => setFormVisible(true)}
+            >
+              Confirmar pedido
             </button>
           </>
         ) : (
           <>
-            <button onClick={() => setFormVisible(false)}>Atras</button>
-            <Form productosCarrito={productosCarrito} />
+            <div className="w-11/12">
+              <button
+                className="flex mb-4 text-sm items-center"
+                onClick={() => setFormVisible(false)}
+              >
+                <AiOutlineArrowLeft className="mr-1" />
+                Volver a carrito
+              </button>
+              <Form productosCarrito={productosCarrito} />
+            </div>
+            <span className="my-2 font-semibold">
+              Total: ${productosCarrito.total}
+            </span>
           </>
         )}
-        <div className="p-4">
-          <span>Total: ${productosCarrito.total}</span>
-          <Link to="/">Continuar comprando</Link>
-        </div>
+        <Link to="/" className="text-sm underline hover:italic">
+          Seguir comprando
+        </Link>
       </div>
     </>
   );
