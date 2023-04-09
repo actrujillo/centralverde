@@ -42,11 +42,11 @@ export default function ProductoCart(props) {
             key={item.id}
             className="flex w-11/12 justify-center items-center my-2 border-2"
           >
-            <div className="w-1/3 h-[120px] bg-white p-2 border-r-2 flex items-center">
+            <div className="w-1/3 h-[120px] bg-white p-2 border-r-2 flex items-center md:items-stretch md:justify-center">
               <img src={item.img} alt="producto en carrito" />
             </div>
-            <div className="w-2/3 h-[120px] px-2 bg-green-50 flex flex-col justify-evenly">
-              <h3 className="capitalize">{item.nombre}</h3>
+            <div className="w-2/3 h-[120px] px-2 bg-green-50 flex flex-col justify-evenly md:text-xl">
+              <h3 className="capitalize md:font-semibold">{item.nombre}</h3>
               <div className="flex justify-between">
                 <p className="">${item.precio * item.cantidad}</p>
                 <button

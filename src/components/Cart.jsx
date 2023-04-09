@@ -18,9 +18,15 @@ export default function Cart() {
     dispatch(vaciarCarrito());
   };
 
+  const totalCart = (
+    <span className="my-2 font-semibold md:text-2xl">
+      Total: ${productosCarrito.total}
+    </span>
+  );
+
   return (
     <>
-      <div className="min-h-[85vh] mt-24 flex flex-col items-center justify-center">
+      <div className="min-h-[85vh] mt-24 flex flex-col items-center justify-start md:mt-40">
         {productosCarrito.productos.length === 0 ? (
           <div className="p-4">
             <h3>No tienes ningún artículo en tu carrito de compras.</h3>
@@ -31,20 +37,21 @@ export default function Cart() {
         ) : !formVisible ? (
           <>
             <div className="flex justify-between w-11/12">
-              <h3 className="font-semibold">Mi Carrito</h3>
+              <h3 className="font-semibold md:text-3xl">Mi Carrito</h3>
               <button
-                className="text-2xl mr-2 hover:text-gray-600"
+                className="text-2xl mr-2 hover:text-gray-600 md:text-4xl md:flex md:items-center"
                 onClick={() => handleClearCart()}
               >
+                <span className="hidden md:block text-xl mr-2">
+                  Vaciar carrito
+                </span>
                 <IoTrashOutline />
               </button>
             </div>
             <ProductoCart productosCarrito={productosCarrito} />
-            <span className="my-2 font-semibold">
-              Total: ${productosCarrito.total}
-            </span>
+            {totalCart}
             <button
-              className="w-11/12 py-2 mb-4 rounded-md bg-green-500 hover:bg-green-400 text-white"
+              className="w-11/12 py-2 mb-4 rounded-md bg-green-500 hover:bg-green-400 text-white md:text-xl"
               onClick={() => setFormVisible(true)}
             >
               Confirmar pedido
@@ -54,7 +61,7 @@ export default function Cart() {
           <>
             <div className="w-11/12">
               <button
-                className="flex mb-4 text-sm items-center"
+                className="flex mb-4 text-sm items-center md:text-xl"
                 onClick={() => setFormVisible(false)}
               >
                 <AiOutlineArrowLeft className="mr-1" />
@@ -62,12 +69,10 @@ export default function Cart() {
               </button>
               <Form productosCarrito={productosCarrito} />
             </div>
-            <span className="my-2 font-semibold">
-              Total: ${productosCarrito.total}
-            </span>
+            {totalCart}
           </>
         )}
-        <Link to="/" className="text-sm underline hover:italic">
+        <Link to="/" className="text-sm underline hover:italic md:text-lg">
           Seguir comprando
         </Link>
       </div>

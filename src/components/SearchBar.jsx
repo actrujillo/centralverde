@@ -4,7 +4,7 @@ export default function SearchBar() {
   return (
     <>
       <>
-        <div className="flex justify-start items-center p-2 m-4 bg-gray-100 text-gray-400 text-sm rounded-lg w-[90%]">
+        <div className="hidden flex justify-start items-center p-2 m-4 bg-gray-100 text-gray-400 text-sm rounded-lg w-[90%]">
           <FaSearch className="ml-2"/>
           <input
             type="text"

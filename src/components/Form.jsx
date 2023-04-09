@@ -45,22 +45,27 @@ export default function Form(props) {
 
     let message =
       `_¡Hola! Te paso el resumen de mi pedido:_\n\n` +
-      `*Nombre:* ${name} \n` +
+      ` *Nombre:* ${name} \n` +
       `*Teléfono:* ${telefono} \n` +
       `*Forma de pago:* ${metodo} \n` +
       `*Total:* $ ${productosCarrito.total} \n` +
       `*Entrega:* ${entrega} \n`;
 
     if (entrega === "Envio a domicilio" && direccion) {
-      message += `*Direccion:* ${direccion}\n`;
+      message += `
+      *Direccion:* ${direccion}\n`;
     }
     if (referencias) {
-      message += `*Referencias:* ${referencias}\n\n`;
+      message += `
+      *Referencias:* ${referencias}\n\n`;
     }
 
-    message += `_Mi pedido es:_ * \n${pedido}*\n\n`;
-    message += `*TOTAL: $ ${productosCarrito.total}*\n\n`;
-    message += `_Espero tu respuesta para confirmar mi pedido_`;
+    message += ` 
+    _Mi pedido es:_ \n*${pedido}*\n\n`;
+    message += ` 
+    *TOTAL: $${productosCarrito.total}*\n\n`;
+    message += ` 
+    _Espero tu respuesta para confirmar mi pedido_`;
     console.log(message);
 
     const phoneNumber = "1159939383";
@@ -68,18 +73,28 @@ export default function Form(props) {
   };
 
   // console.log(form);
-  const titleStyle = "text-xs font-semibold mt-2";
-
-  const divStyle = "flex flex-row flex-wrap";
+  const titleStyle = "text-xs font-semibold mt-4 mb-1 md:text-xl";
+  const divStyle = "flex flex-row flex-wrap mb-4";
+  const labelStyle = "ml-2 text-sm md:text-lg";
 
   return (
     <>
       <form className="flex flex-col">
         <label className={titleStyle}>Nombre completo *</label>
-        <input type="text" name="name" onChange={handleInput} />
+        <input
+          type="text"
+          name="name"
+          onChange={handleInput}
+          className="mb-2"
+        />
 
         <label className={titleStyle}>Telefono *</label>
-        <input type="number" name="telefono" onChange={handleInput} />
+        <input
+          type="number"
+          name="telefono"
+          onChange={handleInput}
+          className="mb-2"
+        />
 
         <span className={titleStyle}>Forma de entrega *</span>
         <div className={divStyle}>
@@ -90,7 +105,7 @@ export default function Form(props) {
               value="Retiro en persona"
               onChange={handleEntrega}
             />
-            <label className="ml-2">Retiro en persona</label>
+            <label className={labelStyle}>Retiro en persona</label>
           </div>
           <div className="w-full mb-1 flex items-center">
             <input
@@ -99,7 +114,7 @@ export default function Form(props) {
               value="Envio a domicilio"
               onChange={handleEntrega}
             />
-            <label className="ml-2">Envio a domicilio</label>
+            <label className={labelStyle}>Envio a domicilio</label>
           </div>
         </div>
 
@@ -118,6 +133,7 @@ export default function Form(props) {
               placeholder="Entre calles, timbre, casa sin numero, etc."
               name="referencias"
               onChange={handleInput}
+              className="mb-2"
             />
           </>
         ) : (
@@ -133,7 +149,7 @@ export default function Form(props) {
               value="Efectivo"
               onChange={handleInput}
             />
-            <label className="ml-2">Efectivo</label>
+            <label className={labelStyle}>Efectivo</label>
           </div>
           <div className="w-full mb-1 flex items-center">
             <input
@@ -142,15 +158,19 @@ export default function Form(props) {
               value="Mercado Pago"
               onChange={handleInput}
             />
-            <label className="ml-2">Mercado Pago</label>
+            <label className={labelStyle}>Mercado Pago</label>
           </div>
         </div>
 
-        {!requerido && <span className="text-xs text-red-600 my-1">*Complete los campos obligatorios</span>}
+        {!requerido && (
+          <span className="text-xs text-red-600 my-1 md:text-lg">
+            *Complete los campos obligatorios
+          </span>
+        )}
         <button
           type="button"
           onClick={handleSubmit}
-          className="w-11/12 py-2 my-2 rounded-md bg-green-500 hover:bg-green-400 text-white"
+          className="w-full py-2 my-2 rounded-md bg-green-500 hover:bg-green-400 text-white md:text-xl"
         >
           Finalizar compra
         </button>

@@ -58,16 +58,18 @@ export default function Ofertas() {
             className="flex flex-col items-center justify-center border w-[40%] p-2 mb-4 mx-2 h-[200px] bg-[#fefefe]"
           >
             <div className="flex w-full justify-end">
-              <span className="bg-orange-600 text-[#fcfcfc] px-2 text-[10px] rounded-[10px] tracking-widest">
+              <span className="bg-orange-600 text-[#fcfcfc] px-2 text-[10px] rounded-[10px] tracking-widest md:text-lg md:px-6">
                 {item.descuento}
               </span>
             </div>
             <img src={item.img} alt="producto" className="h-20" />
-            <h3 className="text-[#134c27] font-semibold py-2">{item.nombre}</h3>
+            <h3 className="text-[#134c27] font-semibold py-2 md:text-xl">
+              {item.nombre}
+            </h3>
             <div className="flex justify-between w-full pl-1">
-              <span className="font-semibold">$ {item.precio}</span>
+              <span className="font-semibold md:text-2xl">$ {item.precio}</span>
               <button
-                className="text-[#009033] text-xl hover:text-green-400"
+                className="text-[#009033] text-xl hover:text-green-400 md:text-3xl"
                 onClick={() => handleAgregar(item)}
               >
                 <FaPlusSquare />

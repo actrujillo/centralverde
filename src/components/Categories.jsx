@@ -24,11 +24,11 @@ export default function Categories() {
             onClick={() => dispatch(categorySelection(cat.titulo))}
           >
             <div className="flex flex-col items-center">
-              <span className="bg-[#c4e3ce] p-4 rounded-full hover:bg-[#009033]">
+              <span className="bg-[#c4e3ce] p-4 rounded-full hover:bg-[#009033] md:p-5 md:text-4xl">
                 {cat.img}
               </span>
               {/* <img src={cat.img} alt="imagen de la categoria" /> */}
-              <h4 className="text-sm mt-2 text-[#134c27] font-semibold capitalize">
+              <h4 className="text-sm mt-2 text-[#134c27] font-semibold capitalize md:text-lg">
                 {cat.titulo}
               </h4>
             </div>

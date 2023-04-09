@@ -24,3 +24,10 @@ body {
   padding: 0.5rem;
   margin: 0.5rem 0;
 }
+
+@media (min-width: 767.98px) {
+  .titulo-home {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1.4em;
+  }
+}
