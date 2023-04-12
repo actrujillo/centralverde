@@ -2,10 +2,13 @@ import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 export default function Header() {
-  // CAMBIAR ESTOS LINKS Y TEXTOS PARA MEJORAR EL SEO!!!
+  const productosCarrito = useSelector((state) => state.carrito.productos);
 
+  // CAMBIAR ESTOS LINKS Y TEXTOS PARA MEJORAR EL SEO!!!
   const Links = [
     { to: "/", text: "Inicio" },
     { to: "/como-comprar", text: "¿Como comprar?" },
@@ -66,6 +69,16 @@ export default function Header() {
                 </Link>
               </li>
             ))}
+            <li className="hidden text-4xl lg:block">
+              <Link to="/cart">
+                <FaShoppingCart />
+                {productosCarrito.length > 0 ? (
+                  <span className="absolute bg-green-600 px-2 py-0 text-white text-base top-8 right-4 rounded-full">
+                    {productosCarrito.length}
+                  </span>
+                ) : null}
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Ofertas from "../components/Ofertas";
 export default function Home() {
   return (
     <>
-      <div className="mt-24 w-[100vw] min-h-[85vh] md:mt-32 md:flex md:flex-col md:justify-center">
+      <div className="mt-24 w-[100vw] min-h-[85vh] md:mt-32 md:flex md:flex-col md:justify-center lg:flex-row lg:flex-wrap">
         <SearchBar />
         <Hero />
         <Categories />

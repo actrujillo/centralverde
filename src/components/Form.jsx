@@ -76,6 +76,7 @@ export default function Form(props) {
   const titleStyle = "text-xs font-semibold mt-4 mb-1 md:text-xl";
   const divStyle = "flex flex-row flex-wrap mb-4";
   const labelStyle = "ml-2 text-sm md:text-lg";
+  const inputStyle = "mb-2 bg-transparent border-gray-300 border-b-2";
 
   return (
     <>
@@ -85,7 +86,7 @@ export default function Form(props) {
           type="text"
           name="name"
           onChange={handleInput}
-          className="mb-2"
+          className={inputStyle}
         />
 
         <label className={titleStyle}>Telefono *</label>
@@ -93,7 +94,7 @@ export default function Form(props) {
           type="number"
           name="telefono"
           onChange={handleInput}
-          className="mb-2"
+          className={inputStyle}
         />
 
         <span className={titleStyle}>Forma de entrega *</span>
@@ -126,6 +127,7 @@ export default function Form(props) {
               name="direccion"
               placeholder="Av Mitre 1000 6°A, Avellaneda"
               onChange={handleInput}
+              className={inputStyle}
             />
             <label className={titleStyle}>Referencias</label>
             <input
@@ -133,7 +135,7 @@ export default function Form(props) {
               placeholder="Entre calles, timbre, casa sin numero, etc."
               name="referencias"
               onChange={handleInput}
-              className="mb-2"
+              className={inputStyle}
             />
           </>
         ) : (

@@ -50,12 +50,12 @@ export default function Ofertas() {
 
   return (
     <>
-      <h3 className="titulo-home">Ofertas</h3>
-      <div className="flex justify-center flex-wrap">
+      <h3 className="titulo-home lg:text-center lg:p-0 lg:m-0 lg:text-4xl">Ofertas</h3>
+      <div className="flex justify-center flex-wrap lg:w-full">
         {Ofertas.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col items-center justify-center border w-[40%] p-2 mb-4 mx-2 h-[200px] bg-[#fefefe]"
+            className="flex flex-col items-center justify-center border w-[40%] p-2 mb-4 mx-2 h-[200px] bg-[#fefefe] lg:w-1/5"
           >
             <div className="flex w-full justify-end">
               <span className="bg-orange-600 text-[#fcfcfc] px-2 text-[10px] rounded-[10px] tracking-widest md:text-lg md:px-6">
